@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Book an Appointment</h2>
+  <form id="appointmentForm">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="doctor">Choose Doctor:</label>
+    <select id="doctor" required>
+      <option value="Dr. Ali (Cardiologist)">Dr. Ali (Cardiologist)</option>
+      <option value="Dr. Sara (Dermatologist)">Dr. Sara (Dermatologist)</option>
+      <option value="Dr. Khan (General Physician)">Dr. Khan (General Physician)</option>
+    </select>
+
+    <label for="date">Preferred Date:</label>
+    <input type="date" id="date" required>
+
+    <button type="submit" class="btn">Book Appointment</button>
+  </form>
+
+  <p id="confirmation"></p>
+  <a href="index.html">Back to Home</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
