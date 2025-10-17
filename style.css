@@ -1,43 +1,192 @@
+/* TeleMed Connect Custom Stylesheet */
+/* This stylesheet extends Bootstrap 5 for a healthcare-focused design */
+
+:root {
+  --primary-blue: #4A90E2; /* Soft medical blue for trust and reliability */
+  --secondary-green: #2ECC71; /* Calm healthcare green for positivity */
+  --light-background: #F4F7F6; /* Clean, clinical background for comfort */
+  --text-color: #495057; /* Professional gray for readable typography */
+  --accent-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle depth for minimal shadowing */
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  color: #333;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif; /* Modern, sans-serif for readability */
+  color: var(--text-color);
+  background-color: var(--light-background);
+  line-height: 1.6; /* Improved line height for better reading comfort */
+  font-size: 16px; /* Base font size for accessibility */
 }
-header {
-  background: #007bff;
-  color: white;
-  padding: 20px;
+
+/* General Typography Enhancements */
+h1, h2, h3 {
+  color: var(--primary-blue); /* Use primary blue for headings to evoke trust */
+  font-weight: 600; /* Bold but not overwhelming */
+  letter-spacing: -0.5px; /* Subtle refinement for a professional look */
 }
-h1, h2 { margin: 20px 0; }
-form {
-  margin: 20px auto;
-  width: 300px;
-  text-align: left;
+
+p {
+  margin-bottom: 1rem; /* Consistent spacing for readability */
 }
-label, input, select, button {
-  display: block;
-  margin: 10px 0;
-  width: 100%;
+
+/* Navigation Enhancements */
+.navbar {
+  background-color: white;
+  box-shadow: var(--accent-shadow); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transitions for user feedback */
 }
-.btn {
-  background: #007bff;
-  color: white;
-  padding: 10px;
+
+.navbar-nav .nav-link {
+  color: var(--primary-blue);
+  transition: color 0.2s, transform 0.2s; /* Hover effects for interactivity */
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--secondary-green);
+  transform: translateY(-2px); /* Subtle lift on hover for engagement */
+}
+
+.navbar-brand {
+  font-weight: 700; /* Strong branding */
+  color: var(--primary-blue) !important;
+}
+
+/* Card Styling for Appointments or Features */
+.card {
   border: none;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 5px;
+  border-radius: 12px; /* Rounded corners for a modern, approachable feel */
+  box-shadow: var(--accent-shadow); /* Minimal shadow for subtle depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
-.btn:hover {
-  background: #0056b3;
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect to indicate interactivity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow on hover */
 }
+
+.card-title {
+  color: var(--primary-blue); /* Consistent heading color */
+}
+
+/* Button Styles for Calls to Action */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  box-shadow: 0 3px 5px rgba(74, 144, 226, 0.3); /* Subtle shadow for button prominence */
+  transition: background-color 0.2s, transform 0.2s; /* Smooth state changes */
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-blue), 10%); /* Darker shade for hover (using conceptual darken; in practice, use a preprocessor or adjust manually) */
+  transform: translateY(-2px); /* Subtle lift for feedback */
+}
+
+.btn-secondary {
+  background-color: var(--secondary-green);
+  border-color: var(--secondary-green);
+  box-shadow: 0 3px 5px rgba(46, 204, 113, 0.3); /* Matching shadow for consistency */
+}
+
+.btn-secondary:hover {
+  background-color: darken(var(--secondary-green), 10%);
+  transform: translateY(-2px);
+}
+
+/* Table Styling for Appointments Table */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px; /* Rounded edges for a softer look */
+  overflow: hidden; /* Ensures rounded corners work with borders */
+}
+
+.table thead th {
+  background-color: var(--primary-blue); /* Header in primary blue for emphasis */
+  color: white; /* High contrast for readability */
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle striping for better scanning */
+}
+
+.table td {
+  vertical-align: middle; /* Align content for a clean look */
+  padding: 1rem;
+  color: var(--text-color); /* Consistent text color */
+}
+
+/* Hero Section for Prominent Pages */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-green)); /* Gradient for a dynamic, calming effect */
+  color: white;
+  padding: 4rem 0;
+  border-radius: 12px; /* Soft edges for visual appeal */
+  margin-bottom: 2rem;
+  box-shadow: var(--accent-shadow); /* Subtle depth */
+}
+
+.hero-section h1 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Minimal shadow for readability on gradients */
+}
+
+/* Footer Styling */
 footer {
-  margin-top: 50px;
-  padding: 10px;
-  background: #ddd;
+  background-color: var(--text-color); /* Darker gray for a professional footer */
+  color: white;
+  padding: 2rem 0;
+  box-shadow: var(--accent-shadow); /* Subtle separation from content */
 }
+
+footer a {
+  color: var(--secondary-green); /* Green links for consistency and accessibility */
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--primary-blue);
+}
+
+/* Responsive and Accessibility Adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* Slightly smaller for mobile readability */
+  }
+  
+  h1 { font-size: 2rem; } /* Scale down headings */
+  h2 { font-size: 1.75rem; }
+  
+  .navbar {
+    padding: 0.5rem; /* Compact navbar on smaller screens */
+  }
+  
+  .table thead th, .table td {
+    padding: 0.75rem; /* Reduce padding for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 2rem 0; /* Less padding on very small screens */
+  }
+}
+
+/* Additional Accessibility Rules */
+a {
+  color: var(--secondary-green); /* Ensure links have high contrast */
+  text-decoration: none; /* Clean look, add underline on hover if needed */
+}
+
+a:hover {
+  text-decoration: underline; /* Standard accessibility practice */
+}
+
+.btn {
+  font-size: 1rem; /* Ensure buttons are easily clickable */
+  padding: 0.75rem 1.5rem; /* Comfortable touch targets */
+}
+
